@@ -188,12 +188,12 @@ OKRadioS1:
 
 1fachS1:
 	if WinActive("ahk_exe phindows.ex_")
-	{
-		SplashTextOn,,25, Anzahl, 1fach S1  %Slidersm1%
-		Sleep, 1000
-		SplashTextOff
-		return
-	}
+		{
+			SplashTextOn,,25, Anzahl, 1fach S1  %Slidersm1%
+			Sleep, 1000
+			SplashTextOff
+			return
+		}
 	return
 
 5fachS1:
