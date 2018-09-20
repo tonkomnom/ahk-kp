@@ -23,7 +23,16 @@ return
 		SendInput, ^s
 	return
 
-F12::Gosub GLT
+F12::
+	KeyWait, F12
+	KeyWait, F12, D T0.2
+	if ErrorLevel
+		SendInput, {F12}
+	else
+		{
+			Gosub, GLT
+		}
+	return
 
 
 global break_g = 0
@@ -116,6 +125,7 @@ OKRadioS0:
 					SendInput, {Enter}
 					Sleep, %Slidersm0%
 					SendInput, {Down}
+					Sleep, %Slidersm0%
 					if(break_g = 1)
 						{
 							return
@@ -143,6 +153,7 @@ OKRadioS0:
 				SendInput, {Enter}
 				Sleep, %Slidersm0%
 				SendInput, {Down}
+				Sleep, %Slidersm0%
 				if(break_g = 1)
 					{
 						return
@@ -189,23 +200,74 @@ OKRadioS1:
 1fachS1:
 	if WinActive("ahk_exe phindows.ex_")
 		{
-			SplashTextOn,,25, Anzahl, 1fach S1  %Slidersm1%
-			Sleep, 1000
-			SplashTextOff
+			SendInput, {Enter}
+			Sleep, %Slidersm1%
+			SendInput, {AltDown}m{AltUp}
+			Sleep, %Slidersm1%
+			SendInput, {ShiftDown}{Tab 3}{ShiftUp}
+			SendInput, {Space}
+			Sleep, %Slidersm1%
+			SendInput, {Enter}
+			Sleep, %Slidersm1%
+			SendInput, {Enter}
 			return
 		}
 	return
 
 5fachS1:
-	SplashTextOn,,25, Anzahl, 5fach S1 %Slidersm1%
-	Sleep, 1000
-	SplashTextOff
+	if WinActive("ahk_exe phindows.ex_")
+		{
+			break_g = 0
+			Loop, 5
+			{
+				SendInput, {Enter}
+				Sleep, %Slidersm1%
+				SendInput, {AltDown}m{AltUp}
+				Sleep, %Slidersm1%
+				SendInput, {ShiftDown}{Tab 3}{ShiftUp}
+				SendInput, {Space}
+				Sleep, %Slidersm1%
+				SendInput, {Enter}
+				Sleep, %Slidersm1%
+				SendInput, {Enter}
+				Sleep, %Slidersm1%
+				SendInput, {Down}
+				Sleep, %Slidersm1%
+				if(break_g = 1)
+					{
+						return
+					}
+			}
+			return
+		}
 	return
 
 10fachS1:
-	SplashTextOn,,25, Anzahl, 10fach S1 %Slidersm1%
-	Sleep, 1000
-	SplashTextOff
+	if WinActive("ahk_exe phindows.ex_")
+		{
+			break_g = 0
+			Loop, 10
+			{
+				SendInput, {Enter}
+				Sleep, %Slidersm1%
+				SendInput, {AltDown}m{AltUp}
+				Sleep, %Slidersm1%
+				SendInput, {ShiftDown}{Tab 3}{ShiftUp}
+				SendInput, {Space}
+				Sleep, %Slidersm1%
+				SendInput, {Enter}
+				Sleep, %Slidersm1%
+				SendInput, {Enter}
+				Sleep, %Slidersm1%
+				SendInput, {Down}
+				Sleep, %Slidersm1%
+				if(break_g = 1)
+					{
+						return
+					}
+			}
+			return
+		}
 	return
 
 
@@ -243,21 +305,67 @@ OKRadioTa:
 	return
 
 1fachTa:
-	SplashTextOn,,25, Anzahl, 1fach Ta %SliderTa%
-	Sleep, 1000
-	SplashTextOff
+	if WinActive("ahk_exe phindows.ex_")
+		{
+			SendInput, {Enter}
+			Sleep, %SliderTa%
+			SendInput, {AltDown}t{AltUp}
+			Sleep, %SliderTa%
+			SendInput, {Enter}
+			Sleep, %SliderTa%
+			SendInput, {Enter}
+			return
+		}
 	return
 
 5fachTa:
-	SplashTextOn,,25, Anzahl, 5fach Ta %SliderTa%
-	Sleep, 1000
-	SplashTextOff
+	if WinActive("ahk_exe phindows.ex_")
+		{
+			break_g = 0
+			Loop, 5
+			{
+				SendInput, {Enter}
+				Sleep, %SliderTa%
+				SendInput, {AltDown}t{AltUp}
+				Sleep, %SliderTa%
+				SendInput, {Enter}
+				Sleep, %SliderTa%
+				SendInput, {Enter}
+				Sleep, %Slidersm1%
+				SendInput, {Down}
+				Sleep, %Slidersm1%
+				if(break_g = 1)
+					{
+						return
+					}
+			}
+			return
+		}
 	return
 
 10fachTa:
-	SplashTextOn,,25, Anzahl, 10fach Ta %SliderTa%
-	Sleep, 1000
-	SplashTextOff
+	if WinActive("ahk_exe phindows.ex_")
+		{
+			break_g = 0
+			Loop, 10
+			{
+				SendInput, {Enter}
+				Sleep, %SliderTa%
+				SendInput, {AltDown}t{AltUp}
+				Sleep, %SliderTa%
+				SendInput, {Enter}
+				Sleep, %SliderTa%
+				SendInput, {Enter}
+				Sleep, %Slidersm1%
+				SendInput, {Down}
+				Sleep, %Slidersm1%
+				if(break_g = 1)
+					{
+						return
+					}
+			}
+			return
+		}
 	return
 
 
@@ -295,21 +403,73 @@ OKRadioTl:
 	return
 
 1fachTl:
-	SplashTextOn,,25, Anzahl, 1fach Tl %SliderTl%
-	Sleep, 1000
-	SplashTextOff
+	if WinActive("ahk_exe phindows.ex_")
+		{
+			SendInput, {Enter}
+			Sleep, %SliderTl%
+			SendInput, {AltDown}t{AltUp}
+			Sleep, %SliderTl%
+			SendInput, {AltDown}l{AltUp}
+			Sleep, %SliderTl%
+			SendInput, {AltDown}j{AltUp}
+			Sleep, %SliderTl%
+			SendInput, {Enter}
+			return
+		}
 	return
 
 5fachTl:
-	SplashTextOn,,25, Anzahl, 5fach Tl %SliderTl%
-	Sleep, 1000
-	SplashTextOff
+	if WinActive("ahk_exe phindows.ex_")
+		{
+			break_g = 0
+			Loop, 5
+			{
+				SendInput, {Enter}
+				Sleep, %SliderTl%
+				SendInput, {AltDown}t{AltUp}
+				Sleep, %SliderTl%
+				SendInput, {AltDown}l{AltUp}
+				Sleep, %SliderTl%
+				SendInput, {AltDown}j{AltUp}
+				Sleep, %SliderTl%
+				SendInput, {Enter}
+				Sleep, %SliderTl%
+				SendInput, {Down}
+				Sleep, %SliderTl%
+				if(break_g = 1)
+					{
+						return
+					}
+			}
+			return
+		}
 	return
 
 10fachTl:
-	SplashTextOn,,25, Anzahl, 10fach Tl %SliderTl%
-	Sleep, 1000
-	SplashTextOff
+	if WinActive("ahk_exe phindows.ex_")
+		{
+			break_g = 0
+			Loop, 10
+			{
+				SendInput, {Enter}
+				Sleep, %SliderTl%
+				SendInput, {AltDown}t{AltUp}
+				Sleep, %SliderTl%
+				SendInput, {AltDown}l{AltUp}
+				Sleep, %SliderTl%
+				SendInput, {AltDown}j{AltUp}
+				Sleep, %SliderTl%
+				SendInput, {Enter}
+				Sleep, %SliderTl%
+				SendInput, {Down}
+				Sleep, %SliderTl%
+				if(break_g = 1)
+					{
+						return
+					}
+			}
+			return
+		}
 	return
 
 
