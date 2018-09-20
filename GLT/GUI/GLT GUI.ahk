@@ -1,4 +1,5 @@
-﻿#SingleInstance, force
+﻿;V0.3
+#SingleInstance, force
 
 I_Icon = %A_ScriptDir%\blue.ico
 Menu, Tray, Icon, %I_Icon%
