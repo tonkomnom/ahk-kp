@@ -23,6 +23,7 @@ return
 		SendInput, ^s
 	return
 
+
 F12::
 	KeyWait, F12
 	KeyWait, F12, D T0.2
@@ -331,9 +332,9 @@ OKRadioTa:
 				SendInput, {Enter}
 				Sleep, %SliderTa%
 				SendInput, {Enter}
-				Sleep, %Slidersm1%
+				Sleep, %SliderTa%
 				SendInput, {Down}
-				Sleep, %Slidersm1%
+				Sleep, %SliderTa%
 				if(break_g = 1)
 					{
 						return
@@ -356,9 +357,9 @@ OKRadioTa:
 				SendInput, {Enter}
 				Sleep, %SliderTa%
 				SendInput, {Enter}
-				Sleep, %Slidersm1%
+				Sleep, %SliderTa%
 				SendInput, {Down}
-				Sleep, %Slidersm1%
+				Sleep, %SliderTa%
 				if(break_g = 1)
 					{
 						return
