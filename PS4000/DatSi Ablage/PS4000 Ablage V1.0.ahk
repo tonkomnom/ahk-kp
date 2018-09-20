@@ -1,4 +1,5 @@
-;V1.0
+﻿;write history to file via FileAppend and FileMove
+;file auditing via Total Commander
 
 #SingleInstance, force
 SetWorkingDir %A_ScriptDir%
