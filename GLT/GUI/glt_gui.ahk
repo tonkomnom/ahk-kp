@@ -1,4 +1,4 @@
-﻿;V0.3
+﻿;V0.3.0
 #SingleInstance, force
 
 I_Icon = %A_ScriptDir%\blue.ico
