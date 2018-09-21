@@ -4,7 +4,7 @@ Dieses Program dient dazu PS4000 Datensicherungen besser und einfacher zu dokume
 
 Leider ist es (im Moment) nicht möglich das Programm über Total Commander zu nutzen.
 
-## Sichernung/Wiederherstellung über PS4000
+## Sicherung/Wiederherstellung über PS4000
 
 * Sicherung oder Wiederherstellung starten -> Programm startet automatisch
 * Zum Datensicherungsordner navigieren
@@ -12,7 +12,7 @@ Leider ist es (im Moment) nicht möglich das Programm über Total Commander zu n
 * In der Benutzeroberfläche des Programms auf "Sichern" oder "Wiederherstellen" klicken
 * Sicherung wie gewohnt ablegen oder Wiederherstellung starten
 
-## Sichernung/Wiederherstellung über Windows Explorer
+## Sicherung/Wiederherstellung über Windows Explorer
 
 * Zum Datensicherungsordner navigieren
 * Rechtsklick auf das Taskleistensymbol (blaues D) -> Ablage über Explorer

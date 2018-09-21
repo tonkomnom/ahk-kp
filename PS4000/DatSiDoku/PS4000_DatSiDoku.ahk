@@ -1,4 +1,4 @@
-﻿;V1.0
+﻿;V1.0.1
 
 #SingleInstance, force
 SetWorkingDir %A_ScriptDir%
@@ -197,11 +197,11 @@ guiAbout:
 	return
 
 gitlink:
-	Run, https://github.com/tonkomnom/ahk-kp/blob/master/PS4000/DatSi_Ablage/PS4000_ablage.ahk
+	Run, https://github.com/tonkomnom/ahk-kp/blob/master/PS4000/DatSiDoku/PS4000_DatSiDoku.ahk
 	return
 
 guiHelp:
-	Run, https://github.com/tonkomnom/ahk-kp/blob/master/PS4000/DatSi_Ablage/
+	Run, https://github.com/tonkomnom/ahk-kp/blob/master/PS4000/DatSiDoku/
 	return
 
 guiclose:
