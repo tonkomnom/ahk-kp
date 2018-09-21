@@ -190,7 +190,7 @@ gExit:
 guiAbout:
 	Gui, 99:Destroy
 	Gui, 99:Add, Text, ,© Manuel Jurca, Kieback&&Peter GmbH && Co. KG
-	Gui, 99:Add, Text, ,Version V1.0, 2018-09-19
+	Gui, 99:Add, Text, ,Version V1.0.1, 2018-09-19
 	Gui, 99:Add, Text, cblue ggitlink, GitHub
 	Gui, 99:Add, Text,
 	Gui, 99:Show, AutoSize
