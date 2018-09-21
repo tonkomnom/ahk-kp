@@ -1,4 +1,5 @@
-﻿#SingleInstance, force
+﻿;V0.3
+#SingleInstance, force
 
 I_Icon = %A_ScriptDir%\blue.ico
 Menu, Tray, Icon, %I_Icon%
@@ -22,6 +23,7 @@ return
 	Else
 		SendInput, ^s
 	return
+
 
 F12::
 	KeyWait, F12
@@ -331,9 +333,9 @@ OKRadioTa:
 				SendInput, {Enter}
 				Sleep, %SliderTa%
 				SendInput, {Enter}
-				Sleep, %Slidersm1%
+				Sleep, %SliderTa%
 				SendInput, {Down}
-				Sleep, %Slidersm1%
+				Sleep, %SliderTa%
 				if(break_g = 1)
 					{
 						return
@@ -356,9 +358,9 @@ OKRadioTa:
 				SendInput, {Enter}
 				Sleep, %SliderTa%
 				SendInput, {Enter}
-				Sleep, %Slidersm1%
+				Sleep, %SliderTa%
 				SendInput, {Down}
-				Sleep, %Slidersm1%
+				Sleep, %SliderTa%
 				if(break_g = 1)
 					{
 						return
