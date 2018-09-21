@@ -1,4 +1,4 @@
-;V1.0
+﻿;V1.0
 
 #SingleInstance, force
 SetWorkingDir %A_ScriptDir%
@@ -191,10 +191,12 @@ guiAbout:
 	Gui, 99:Destroy
 	Gui, 99:Add, Text, ,© Manuel Jurca, Kieback&&Peter GmbH && Co. KG
 	Gui, 99:Add, Text, ,Version V1.0, 2018-09-19
-	Gui, 99:Add, Text, ,
-	Gui, 99:Add, Text, ,jurca@kieback-peter.de
-	Gui, 99:Add, Text, ,Tel: 4128
+	Gui, 99:Add, Text, cblue ggitlink, GitHub
 	Gui, 99:Show, AutoSize
+	return
+
+gitlink:
+	Run, https://github.com/tonkomnom/ahk-kp/blob/master/PS4000/DatSi_Ablage/PS4000_ablage.ahk
 	return
 
 guiHelp:
