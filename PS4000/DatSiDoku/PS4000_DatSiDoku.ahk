@@ -73,11 +73,13 @@ guiSichern:
 
 navpath:
 	WinGetTitle, vaktprojekt, PS4000 - "
-	FileRead, vdatabase, projektnamen.txt
+	FileRead, vdatabase, database.txt
 		if InStr(vdatabase, vaktprojekt)
 			{	
 				vneedle := "(?<=path:).+"
 				RegExMatch(vdatabase, vneedle, vcurrentPath, InStr(vdatabase, vaktprojekt))
+				;ControlClick, [Control-or-Pos, WinTitle, WinText, WhichButton, ClickCount, Options, ExcludeTitle, ExcludeText]
+				;ControlSend, [ Control, Keys, WinTitle, WinText, ExcludeTitle, ExcludeText]
 				SendInput, {TAB 5}
 				SendInput, {Enter}
 				SendInput, %vcurrentPath%
@@ -97,7 +99,7 @@ navpath:
 
 Sichern:
 	WinGetTitle, vaktprojekt, PS4000 - "
-	FileRead, vdatabase, projektnamen.txt
+	FileRead, vdatabase, database.txt
 		if InStr(vdatabase, vaktprojekt)
 			{
 				WinGet, win_id, ID, A
@@ -137,7 +139,7 @@ Sichern:
 								(
 									%vaktprojekt% path:%vcurrentPath%
 					
-								), %A_ScriptDir%\projektnamen.txt
+								), %A_ScriptDir%\database.txt
 						}
 			}
 	vaktprojekt := ""
@@ -253,7 +255,7 @@ Explorersub3:
 /*
 WriteDatabase:
 	WinGetTitle, vaktprojekt, ahk_exe PS4000.exe
-	FileRead, vdatabase, projektnamen.txt
+	FileRead, vdatabase, database.txt
 	if InStr(vdatabase, vaktprojekt)
 		{
 			needle := "(?<=path:).+"
@@ -282,7 +284,7 @@ WriteDatabase:
 						(
 							%vaktprojekt% path:%currentPath%
 			
-						), %A_ScriptDir%\projektnamen.txt
+						), %A_ScriptDir%\database.txt
 					vaktprojekt := ""
 					vdatabase := ""
 				}
