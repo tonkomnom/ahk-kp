@@ -37,6 +37,7 @@ return
 		SendInput, ^s
 	return
 
+F12::Gosub, guiExplorer
 ;!F11::Gosub, WriteDatabase
 
 #IfWinActive, PS4000 Projektkonsole
@@ -91,6 +92,7 @@ navpath:
 				Sleep, 1000
 				SplashTextOff
 			}
+	vneedle := ""
 	vaktprojekt := ""
 	vdatabase := ""
 	vcurrentPath :=""
@@ -98,7 +100,9 @@ navpath:
 
 
 Sichern:
-	WinGetTitle, vaktprojekt, PS4000 - "
+	WinGetTitle, vwindowname, PS4000 - "
+	vneedle = "(?<=\")(.*?)(?=\")"
+	RegExMatch(vwindowname, vneedle, vaktprojekt)
 	FileRead, vdatabase, database.txt
 		if InStr(vdatabase, vaktprojekt)
 			{
@@ -140,8 +144,14 @@ Sichern:
 									%vaktprojekt% path:%vcurrentPath%
 					
 								), %A_ScriptDir%\database.txt
+							FileAppend,
+								(
+									%vaktprojekt%
+					
+								), %A_ScriptDir%\projekte.txt
 						}
 			}
+	vneedle := ""
 	vaktprojekt := ""
 	vdatabase := ""
 	vcurrentPath :=""
@@ -185,6 +195,7 @@ guiExplorer:
 	Gui, Add, Button, x40 y5 h20 w120 gExplorersub1, Sichern
 	Gui, Add, Button, x40 h20 w120 gExplorersub2, Wiederherstellen
 	Gui, Add, Button, x40 h20 w120 gExplorersub3, Ausbuchen
+	Gui, Add, ListBox, vtest, black|white|yellow
 	Gui, Add, Button, x65 y170 h20 w70 gexit, Schließen
 	return
 
