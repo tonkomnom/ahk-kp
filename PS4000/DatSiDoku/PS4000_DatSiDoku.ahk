@@ -79,12 +79,12 @@ navpath:
 			{	
 				vneedle := "(?<=path:).+"
 				RegExMatch(vdatabase, vneedle, vcurrentPath, InStr(vdatabase, vaktprojekt))
-				;ControlClick, [Control-or-Pos, WinTitle, WinText, WhichButton, ClickCount, Options, ExcludeTitle, ExcludeText]
-				;ControlSend, [ Control, Keys, WinTitle, WinText, ExcludeTitle, ExcludeText]
-				SendInput, {TAB 5}
-				SendInput, {Enter}
-				SendInput, %vcurrentPath%
-				SendInput, {Enter}
+				ControlClick, x1045 y50, Speichern unter
+				ControlSend, Edit2, vcurrentPath, Speichern unter
+				;SendInput, {TAB 5}
+				;SendInput, {Enter}
+				;SendInput, %vcurrentPath%
+				;SendInput, {Enter}
 			}
 		else
 			{
