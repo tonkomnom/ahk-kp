@@ -1,3 +1,3 @@
-![tinkertown](https://raw.githubusercontent.com/tonkomnom/tinker_town/master/assets/serveimage50.png)
+# tinker_town
 
 I use this repo to learn Git.
