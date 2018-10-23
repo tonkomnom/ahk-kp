@@ -1,2 +1,3 @@
+test.gitattributes export-ignore
 testfile.txt export-ignore
 assets export-ignore
